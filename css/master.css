@@ -1,0 +1,19 @@
+:root {
+  --black-coral: #60656F;
+  --carolina-blue: #279AF1;
+  --baby-powder: #F0F4EF;
+  --hot-pink: #F865B0;
+  --charcoal-black: #131112;
+}
+
+@font-face {
+  font-family: "titilliumweb";
+  src:  url('../fonts/tits.woff') format('woff'),
+        url('../fonts/tits.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+}
+
+body {
+  background-color: var(--black-coral);
+}
