@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('./partials/head.ejs', {title: "hvem er du?", css:"master.css"}) %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+
+    <form class="login">
+      <input type="text" name="userID" placeholder="brukernavn">
+      <input type="password" name="password" placeholdeR="password">
+      <button type="button" name="button">Logg Inn</button>
+    </form>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

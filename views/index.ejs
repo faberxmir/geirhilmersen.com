@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('./partials/head.ejs',
+  {title: "home", css:"/master.css"}); %>
+
+  <body>
+    <%- include('./partials/nav.ejs') %>
+
+      <div class="bloggInnhold">
+        <h2>Geir sine blogger</h2>
+        <% if(blogs.length > 0) { %>
+          <% blogs.forEach(blog => { %>
+            <h3 class="title"><%= blog.title%></h3>
+            <p class="snippet"><%= blog.snippet %></p>
+          <% }); %>
+        <% } else {%>
+            <p>Ooops.. ingen blogginlegg enda! </p>
+          <% } %>
+      </div>
+      <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

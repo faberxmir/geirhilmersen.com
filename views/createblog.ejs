@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('./partials/head.ejs', {title: "skriv blogg", css:"master.css"}) %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="createblog">
+      <form>
+        <label for="title">Blogg Tittel</label>
+        <input type="text" id="title" required>
+        <label for="snippet">Utdrag:</label>
+        <input type="text" id="snippet" required>
+        <label for="body">Full Blogg:</label>
+        <textarea id="body" required></textarea>
+        <button>Submit</button>
+      </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
