@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <%- include('./partials/head.ejs',
-  {title: "home", css:"/master.css"}); %>
+  <%- include('./partials/head.ejs', {title, css:'/master.css'}); %>
 
   <body>
     <%- include('./partials/nav.ejs') %>
@@ -10,12 +9,16 @@
         <h2>Geir sine blogger</h2>
         <% if(blogs.length > 0) { %>
           <% blogs.forEach(blog => { %>
-            <h3 class="title"><%= blog.title%></h3>
-            <p class="snippet"><%= blog.snippet %></p>
+            <div class="blogg">
+              <a class="single" href="/blogs/<%= blog.title %>">
+                <h3 class="title"><%= blog.title%></h3>
+                <p class="snippet"><%= blog.snippet %></p>
+              </a>
+            </div>
           <% }); %>
-        <% } else {%>
-            <p>Ooops.. ingen blogginlegg enda! </p>
-          <% } %>
+        <% } else { %>
+          <p>Ooops.. ingen blogginlegg enda! </p>
+        <% } %>
       </div>
       <%- include('./partials/footer.ejs') %>
   </body>

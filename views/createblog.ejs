@@ -3,17 +3,21 @@
   <%- include('./partials/head.ejs', {title: "skriv blogg", css:"master.css"}) %>
   <body>
     <%- include('./partials/nav.ejs') %>
+
     <div class="createblog">
-      <form>
+      <form action = "/blogs" method="POST">
         <label for="title">Blogg Tittel</label>
-        <input type="text" id="title" required>
+        <input type="text" id="title" name="title" required>
         <label for="snippet">Utdrag:</label>
-        <input type="text" id="snippet" required>
+        <input type="text" id="snippet" name="snippet" required>
         <label for="body">Full Blogg:</label>
-        <textarea id="body" required></textarea>
-        <button>Submit</button>
+        <textarea id="body" name ="body" required></textarea>
+        <div class="buttonPlaceMent">
+          <button>Submit</button>
+        </div>
       </form>
     </div>
+    
     <%- include('./partials/footer.ejs') %>
   </body>
 </html>

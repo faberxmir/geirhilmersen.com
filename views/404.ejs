@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <%- include('./partials/head.ejs') %>
+  <%- include('./partials/head.ejs',
+  {title, css:'/master.css'}) %>
   <body>
     <%- include('./partials/nav.ejs') %>
-
-    <h1> 404 - Page does not exist </h1>
-    <p> ooops.. something went wrong! </p>
-
+    <div class="p404">
+      <h1> <%=title%> </h1>
+      <p> ooops.. something went wrong! </p>
+    </div>
     <%- include('./partials/footer.ejs') %>
   </body>
 </html>
