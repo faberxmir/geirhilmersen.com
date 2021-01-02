@@ -11,12 +11,16 @@ const db_URI = 'mongodb+srv://geirhilmersen_com:aBSp2zkUpjQhvkYY6417@cluster0.5o
 console.log('attempting to connect to db...');
 mongoose.connect(db_URI, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(result => {
+    //console.log(result);
     console.log('db connection: success');
     console.log('starting server...');
     app.listen(80);
     console.log('server has started!');
   })
-  .catch(err => console.log(err));
+  .catch(err => {
+    console.log("Error in startup: ")
+    console.log(err)
+  });
 
 //register view engine
 app.set('view engine', 'ejs');

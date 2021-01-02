@@ -163,6 +163,9 @@ footer {
   padding: 0 10%;
 }
 
+.blogg a{
+  text-decoration: none;
+}
 .blogg .snippet{
   font-style: italic;
   color: var(--baby-powder);
@@ -196,7 +199,7 @@ footer {
   padding: 8px;
   color: var(--hot-pink);
   text-decoration: none;
-  
+
 }
 
 .delete:hover {
